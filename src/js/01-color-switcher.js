@@ -4,10 +4,10 @@ stopButton.disabled = true;
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
-const timerId = null;
+let timerId = null;
 
 startButton.addEventListener('click', onClickStart)
-function onClickStart(evt){
+function onClickStart(){
    timerId = setInterval(() => {
       document.body.style.backgroundColor = getRandomHexColor()
     },1000)
